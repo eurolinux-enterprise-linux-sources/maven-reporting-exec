@@ -1,6 +1,6 @@
 Name:           maven-reporting-exec
 Version:        1.1
-Release:        4%{?dist}
+Release:        5%{?dist}
 BuildArch:      noarch
 Summary:        Classes to manage report plugin executions with Maven 3
 
@@ -12,6 +12,7 @@ BuildRequires:  java-devel
 BuildRequires:  jpackage-utils
 BuildRequires:  maven-local
 BuildRequires:  maven-invoker-plugin
+BuildRequires:  maven-shared
 BuildRequires:  maven-surefire-plugin
 BuildRequires:  maven-surefire-provider-junit4
 BuildRequires:  plexus-containers-component-metadata
@@ -61,6 +62,10 @@ find -iname '*.java' -exec sed -i 's/org.eclipse.aether/org.sonatype.aether/g' '
 
 
 %changelog
+* Fri Aug  1 2014 Mikolaj Izdebski <mizdebsk@redhat.com> - 1.1-5
+- Add missing build-requires on maven-shared
+- Resolves: rhbz#1074929
+
 * Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.1-4
 - Mass rebuild 2013-12-27
 
