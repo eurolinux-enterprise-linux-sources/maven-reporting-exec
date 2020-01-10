@@ -1,6 +1,6 @@
 Name:           maven-reporting-exec
 Version:        1.1
-Release:        3%{?dist}
+Release:        4%{?dist}
 BuildArch:      noarch
 Summary:        Classes to manage report plugin executions with Maven 3
 
@@ -61,6 +61,9 @@ find -iname '*.java' -exec sed -i 's/org.eclipse.aether/org.sonatype.aether/g' '
 
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.1-4
+- Mass rebuild 2013-12-27
+
 * Mon Jun 10 2013 Stanislav Ochotnicky <sochotnicky@redhat.com> - 1.1-3
 - Remove unused source
 
